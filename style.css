@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+@font-face {
+    font-family: 'Alex Brush';
+src: url('AlexBrush-regular.ttf') format('truetype'); /* Adjust the path */
+font-weight: normal;
+font-style: normal;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2f3542;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+}
+
+.title{
+    font-family: "Alex Brush", cursive;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #eccc68;
+  box-shadow: 0 0 0 2px #eccc68;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 25px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.box:hover {
+  background-color: #eccc68;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#status {
+  padding: 20px;
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+button {
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  color: white;
+  background-color: #ff4757;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #ff1e43;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.win {
+  animation: winAnimation ease-in-out 1s infinite;
+}
+
+@keyframes winAnimation {
+  0% {
+    background-color: #ffffff;
+  }
+  100% {
+    background-color: #060808;
+  }
+}
+
+#img {
+  width: 68px;
+  height: 69px;
+}
+
+.celebration-animation {
+    animation: celebrationPopupAnimation ease-in-out 1s forwards;
+  }
+  
+  @keyframes celebrationPopupAnimation {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
